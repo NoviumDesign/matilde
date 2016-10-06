@@ -1,0 +1,34 @@
+{
+  "name": "matilde",
+  "version": "0.0.0",
+  "private": true,
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {},
+  "scripts": {
+    "start": "node ./bin/www",
+    "lint": "jshint **.js",
+    "build": "npm run build:js && npm run build:css",
+    "build:css": "node-sass _System/assets/sass/application.scss > _System/public/stylesheets/application.css",
+    "build:js": "browserify _System/assets/javascript/application.js > _System/public/javascript/application.js",
+    "browsersync": "browser-sync start --proxy 'http://matilde.noviumplatform.se' --serveStatic 'public' --files 'public'",
+    "dev": "parallelshell \"npm run browsersync\" \" node-sass _System/assets/sass/* -o _System/public/stylesheets --source-map true --watch\" \" watchify _System/assets/javascript/application.js -o _System/public/javascript/application.js --debug --verbose \""
+  },
+  "dependencies": {
+    "bourbon": "^5.0.0-beta.6",
+    "breakpoint-sass": "^2.7.0",
+    "susy": "^2.2.12"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.16.0",
+    "browserify": "^13.1.0",
+    "browserify-shim": "^3.8.12",
+    "jshint": "latest",
+    "node-sass": "^3.8.0",
+    "parallelshell": "^2.0.0",
+    "watchify": "^3.7.0"
+  }
+}
