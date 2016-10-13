@@ -1,0 +1,41 @@
+header
+  position: fixed
+  top: 0
+  height: $header-height
+  width: 100%
+  z-index: $header-z-index
+
+  .borders
+    +span(4)
+    height: 100%
+    position: relative
+    z-index: $header-content-z-index
+
+    &:last-child
+      +span(4 last)
+
+    +breakpoint($medium-screen)
+      +span(2)
+
+      &:last-child
+        +span(2 last)
+
+    +breakpoint($large-screen)
+      +span(3)
+
+      &:last-child
+        +span(3 last)
+
+    &:after,
+    &:before
+      content: " "
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: $header-height/3
+      background-color: $burgundy
+
+    &:after
+      top: auto
+      bottom: 0

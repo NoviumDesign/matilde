@@ -1,0 +1,61 @@
+#do-toggle-nav
+  +span(4)
+  position: relative
+  background: none
+  padding: 0
+  color: $burgundy
+  text-transform: uppercase
+  margin-top: 30px
+  z-index: $header-content-z-index
+
+  +breakpoint($medium-screen)
+    display: none
+
+  &:focus
+    outline: none
+
+nav#main-nav
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  height: 100vh
+  width: 100vw
+  background-color: $berit
+  padding-top: $header-height + 32px
+  z-index: $mobile-nav-z-index
+
+  li
+    text-align: center
+    margin-bottom: $small-spacing
+
+  a
+    color: $burgundy
+    border: none
+
+
+  +breakpoint($medium-screen)
+    +span(8)
+    position: relative
+    display: block
+    height: auto
+    background: none
+    text-align: center
+    padding-top: 0
+    margin-top: 30px
+
+    +breakpoint($large-screen)
+      +span(6)
+
+    li
+      display: inline-block
+      margin-right: $base-spacing
+      margin-bottom: 0
+      text-align: left
+
+      &:last-child
+        margin-right: 0
+
+body.nav-open
+  nav#main-nav
+    display: block

@@ -1,0 +1,41 @@
+$footer-border-height: 180px
+
+footer
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding-top: $footer-border-height*1.35
+  padding-bottom: $footer-border-height*0.35
+  color: $burgundy
+
+  &:before
+    position: absolute
+    content: " "
+    top: 0
+    left: 0
+    width: 100%
+    height: $footer-border-height
+    background-image: url('../images/border.svg')
+    background-size: contain
+    background-position: center
+    background-repeat: repeat-x
+
+  img
+    max-height: 45px
+    margin-bottom: $base-spacing
+
+  .adress,
+  .contact-info
+    text-align: center
+
+  .adress
+    margin-bottom: $base-spacing
+
+  a
+    text-transform: none
+    border: none
+    color: $burgundy
+
+    &:hover
+      color: lighten($burgundy, 15%)

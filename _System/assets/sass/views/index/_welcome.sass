@@ -1,0 +1,28 @@
+.welcome
+  position: relative
+  background-image: url('../images/bg-welcome.jpg')
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  flex-direction: column
+  justify-content: center
+  height: 70vh
+  color: $brand-color
+
+  +breakpoint($medium-screen)
+    height: 100vh
+
+  .logo
+    max-height: 75px
+    margin-bottom: $base-spacing
+
+  .scroll-arrow
+    position: absolute
+    bottom: 0
+    margin-left: auto
+    left: -1em
+    margin-left: 50%
+
+    img
+      display: block
+      width: 2em

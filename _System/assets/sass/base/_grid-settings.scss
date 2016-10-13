@@ -1,0 +1,12 @@
+$susy: (
+  container: 1200px,
+  columns: 12,
+  gutters: .75,
+  global-box-sizing: content-box
+);
+
+%container {
+  @include container;
+  padding-left: $base-spacing;
+  padding-right: $base-spacing;
+}

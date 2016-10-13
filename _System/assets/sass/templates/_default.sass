@@ -1,0 +1,88 @@
+body
+  margin: 0
+  background-image: url('../images/bg.jpg')
+  background-repeat: repeat
+
+.main
+  display: flex
+  flex-direction: column
+
+.height-100
+  display: flex
+  flex: 1
+  flex-direction: column
+  flex-wrap: wrap
+  align-items: center
+  justify-content: space-between
+  text-align: center
+  padding: 0 $base-spacing $base-spacing $base-spacing
+
+  +breakpoint($medium-screen)
+    padding: $base-spacing
+
+  +breakpoint($large-screen)
+    height: 100vh
+    flex-direction: row
+
+.image
+  display: flex
+  flex-direction: column
+
+  +breakpoint($medium-screen)
+    flex-direction: row
+    justify-content: space-around
+    width: 100%
+
+  +breakpoint($large-screen)
+    flex-basis: span(3.5)
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: center
+    width: auto
+
+  img
+    display: block
+    margin: auto
+
+    &:nth-child(n+2)
+      margin-top: $base-spacing
+
+    +breakpoint($medium-screen)
+      max-height: 40vh
+      max-width: 50%
+
+      &:nth-child(n+2)
+        margin-top: 0
+
+    +breakpoint($large-screen)
+      max-width: 100%
+
+      &:nth-child(n+2)
+        margin-top: $base-spacing
+
+  .illustration
+    max-width: 75%
+
+    +breakpoint($medium-screen)
+      width: 35%
+      height: 100%
+      max-width: none
+
+    +breakpoint($large-screen)
+      width: auto
+      max-height: 30vh
+
+      &:first-child
+        margin-bottom: $base-spacing*3
+
+      &:last-child
+        margin-top: $base-spacing*4
+
+.info
+  padding: $base-spacing
+
+  +breakpoint($medium-screen)
+    flex-basis: span(5)
+
+  +breakpoint($large-screen)
+    padding: 0

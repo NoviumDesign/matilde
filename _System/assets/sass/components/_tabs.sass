@@ -1,0 +1,30 @@
+.tabs
+  background: yellow
+
+  input
+    display: none
+
+  label
+    display: block
+    float: left
+    width: 33.3333%
+    text-align: center
+    cursor: pointer
+    color: $action-color
+    text-transform: uppercase
+
+    &:hover
+      color: lighten($action-color, 50%)
+
+.tab-content
+  display: none
+  width: 100%
+  float: left
+  
+.tabs [id^="tab"]:checked + label
+  text-decoration: underline
+
+#tab1:checked ~ #tab-content1,
+#tab2:checked ~ #tab-content2,
+#tab3:checked ~ #tab-content3
+  display: block

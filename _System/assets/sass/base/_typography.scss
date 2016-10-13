@@ -3,6 +3,7 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
+  font-weight: normal;
 }
 
 h1,
@@ -14,7 +15,13 @@ h6 {
   font-family: $heading-font-family;
   font-size: modular-scale(1);
   line-height: $heading-line-height;
+  font-weight: normal;
   margin: 0 0 $small-spacing;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
 }
 
 p {
@@ -24,12 +31,13 @@ p {
 a {
   color: $action-color;
   text-decoration: none;
+  text-transform: uppercase;
   transition: color $base-duration $base-timing;
 
   &:active,
   &:focus,
   &:hover {
-    color: shade($action-color, 25%);
+    color: lighten($action-color, 50%);
   }
 }
 
