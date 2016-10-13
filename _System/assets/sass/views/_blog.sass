@@ -1,0 +1,50 @@
+.blog-jumbotron
+  display: flex
+  flex-direction: column
+  margin-top: $header-height + 30px
+  padding: $base-spacing*2
+  align-items: center
+
+.blog-content
+  padding: 0 $base-spacing $base-spacing $base-spacing
+
+  #catblogoutput
+    display: flex
+    flex-direction: column
+
+    +breakpoint($medium-screen)
+      flex-direction: row
+      flex-wrap: wrap
+
+    .blog-list-post
+      margin-bottom: $base-spacing
+
+      +breakpoint($medium-screen)
+        flex-basis: span(6)
+
+      +breakpoint($large-screen)
+        flex-basis: span(4)
+
+    .blog-single-post
+      margin-bottom: $base-spacing
+
+      +breakpoint($medium-screen)
+        flex-basis: span(8)
+
+      +breakpoint($large-screen)
+        flex-basis: span(6)
+
+      img
+        display: block
+        margin-bottom: $base-spacing
+        margin-left: auto
+        margin-right: auto
+
+.blog-list #catblogoutput
+  justify-content: space-between
+
+.blog-single #catblogoutput
+  justify-content: center
+
+.post-title a
+  text-transform: none
