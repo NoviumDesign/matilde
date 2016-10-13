@@ -12,14 +12,16 @@
     "start": "node ./bin/www",
     "lint": "jshint **.js",
     "build": "npm run build:js && npm run build:css",
-    "build:css": "node-sass _System/assets/sass/application.scss > _System/public/stylesheets/application.css",
+    "build:css": "node-sass _System/assets/sass/application.scss > _System/public/stylesheets/application.css \" node-sass _System/assets/sass/booking-system.scss > _System/public/stylesheets/booking-system.css \"",
     "build:js": "browserify _System/assets/javascript/application.js > _System/public/javascript/application.js",
     "browsersync": "browser-sync start --proxy 'http://matilde.noviumplatform.se' --serveStatic 'public' --files 'public'",
-    "dev": "parallelshell \"npm run browsersync\" \" node-sass _System/assets/sass/* -o _System/public/stylesheets --source-map true --watch\" \" watchify _System/assets/javascript/application.js -o _System/public/javascript/application.js --debug --verbose \""
+    "dev": "parallelshell \"npm run browsersync\" \" node-sass _System/assets/sass/** -o _System/public/stylesheets --source-map true --watch\" \" postcss --use autoprefixer -o _System/public/stylesheets/application.css _System/public/stylesheets/application.css \" \" node-sass _System/assets/sass/booking-system.scss -o _System/public/stylesheets --source-map true --watch\" \" watchify _System/assets/javascript/application.js -o _System/public/javascript/application.js --debug --verbose \""
   },
   "dependencies": {
+    "autoprefixer": "^6.5.0",
     "bourbon": "^5.0.0-beta.6",
     "breakpoint-sass": "^2.7.0",
+    "postcss-cli": "^2.6.0",
     "susy": "^2.2.12"
   },
   "devDependencies": {
