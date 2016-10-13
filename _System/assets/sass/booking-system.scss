@@ -165,7 +165,6 @@ textarea {
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0;
-    outline: 0
 }
 input[type=date].small,
 input[type=email].small,
@@ -323,7 +322,6 @@ input[type=submit] {
     transition: all .1s ease-in-out 0s;
     background-color: transparent;
     border-color: #fff;
-    outline: 0
 }
 button:focus,
 button:hover,
@@ -457,12 +455,10 @@ input[type=submit]:active {
 .button:hover {
     background-color: #a0901f;
     color: #fff;
-    outline: 0
 }
 .button:active {
     background-color: #756a17;
     color: #fff;
-    outline: 0
 }
 *,
 :after,
@@ -1134,12 +1130,10 @@ div.button {
 .rest_btn:hover {
     background-color: #a0901f;
     color: #fff;
-    outline: 0
 }
 .rest_btn:active {
     background-color: #756a17;
     color: #fff;
-    outline: 0
 }
 @media (max-width: 320px) {
     .rest_btn {
@@ -1315,7 +1309,6 @@ div.button {
 .lang a:focus,
 .lang a:hover {
     background-color: lighten($burgundy, 15%);
-    outline: 0
 }
 #select_meals p a:active,
 .btn:active,
@@ -1323,7 +1316,6 @@ div.button {
     background-color: #0f1115;
     border-color: #0f1115;
     color: #fff;
-    outline: 0
 }
 @media (max-width: 320px) {
     #select_meals p a,

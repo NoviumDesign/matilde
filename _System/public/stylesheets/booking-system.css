@@ -162,8 +162,14 @@ h6 {
   margin: 0 0 0.75em; }
 
 h1,
-h2 {
-  text-transform: uppercase; }
+h2,
+h4 {
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
+h4 {
+  font-size: 1.125rem;
+  margin-bottom: 0.375em; }
 
 p {
   margin: 0 0 0.75em; }
@@ -172,7 +178,8 @@ a {
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
-  transition: color 150ms ease; }
+  transition: color 150ms ease;
+  letter-spacing: 1px; }
   a:active, a:focus, a:hover {
     color: gray; }
 
@@ -340,8 +347,7 @@ textarea {
   width: 100%;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
-  border-radius: 0;
-  outline: 0; }
+  border-radius: 0; }
 
 input[type=date].small,
 input[type=email].small,
@@ -498,8 +504,7 @@ input[type=submit] {
   cursor: pointer;
   transition: all .1s ease-in-out 0s;
   background-color: transparent;
-  border-color: #fff;
-  outline: 0; }
+  border-color: #fff; }
 
 button:focus,
 button:hover,
@@ -631,13 +636,11 @@ input[type=submit]:active {
 .button:focus,
 .button:hover {
   background-color: #a0901f;
-  color: #fff;
-  outline: 0; }
+  color: #fff; }
 
 .button:active {
   background-color: #756a17;
-  color: #fff;
-  outline: 0; }
+  color: #fff; }
 
 *,
 :after,
@@ -1306,13 +1309,11 @@ div.button {
 .rest_btn:focus,
 .rest_btn:hover {
   background-color: #a0901f;
-  color: #fff;
-  outline: 0; }
+  color: #fff; }
 
 .rest_btn:active {
   background-color: #756a17;
-  color: #fff;
-  outline: 0; }
+  color: #fff; }
 
 @media (max-width: 320px) {
   .rest_btn {
@@ -1486,16 +1487,14 @@ div.button {
 .btn:hover,
 .lang a:focus,
 .lang a:hover {
-  background-color: #dc255f;
-  outline: 0; }
+  background-color: #dc255f; }
 
 #select_meals p a:active,
 .btn:active,
 .lang a:active {
   background-color: #0f1115;
   border-color: #0f1115;
-  color: #fff;
-  outline: 0; }
+  color: #fff; }
 
 @media (max-width: 320px) {
   #select_meals p a,

@@ -20,8 +20,15 @@ h6 {
 }
 
 h1,
-h2 {
+h2,
+h4 {
   text-transform: uppercase;
+  letter-spacing: $base-letter-spacing;
+}
+
+h4 {
+  font-size: $base-font-size;
+  margin-bottom: $small-spacing/2;
 }
 
 p {
@@ -33,6 +40,7 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   transition: color $base-duration $base-timing;
+  letter-spacing: $base-letter-spacing;
 
   &:active,
   &:focus,

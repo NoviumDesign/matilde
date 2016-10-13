@@ -1,5 +1,5 @@
 .tabs
-  background: yellow
+  +clearfix
 
   input
     display: none
@@ -20,11 +20,16 @@
   display: none
   width: 100%
   float: left
-  
+  margin-top: $base-spacing
+  text-align: left
+
 .tabs [id^="tab"]:checked + label
   text-decoration: underline
 
 #tab1:checked ~ #tab-content1,
 #tab2:checked ~ #tab-content2,
-#tab3:checked ~ #tab-content3
+#tab3:checked ~ #tab-content3,
+#tab4:checked ~ #tab-content4,
+#tab5:checked ~ #tab-content5,
+#tab6:checked ~ #tab-content6
   display: block
