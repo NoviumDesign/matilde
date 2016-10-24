@@ -7,7 +7,7 @@ button, [type='button'], [type='reset'], [type='submit'] {
   cursor: pointer;
   display: inline-block;
   font-family: "PT Mono", monospace;
-  font-size: 1.125rem;
+  font-size: 1em;
   -webkit-font-smoothing: antialiased;
   line-height: 1;
   padding: 0.75em 1.5em;
@@ -46,7 +46,7 @@ select,
 textarea {
   display: block;
   font-family: "PT Mono", monospace;
-  font-size: 1.125rem; }
+  font-size: 1em; }
 
 [type='color'], [type='date'], [type='datetime'], [type='datetime-local'], [type='email'], [type='month'], [type='number'], [type='password'], [type='search'], [type='tel'], [type='text'], [type='time'], [type='url'], [type='week'], input:not([type]), textarea {
   appearance: none;
@@ -145,7 +145,7 @@ th {
 body {
   color: #000;
   font-family: "PT Mono", monospace;
-  font-size: 1.125rem;
+  font-size: 1em;
   line-height: 1.5;
   font-weight: normal; }
 
@@ -168,7 +168,7 @@ h4 {
   letter-spacing: 1px; }
 
 h4 {
-  font-size: 1.125rem;
+  font-size: 1em;
   margin-bottom: 0.375em; }
 
 p {
@@ -403,8 +403,7 @@ body.nav-open nav#main-nav {
   display: none;
   width: 100%;
   float: left;
-  margin-top: 1.5em;
-  text-align: left; }
+  margin-top: 1.5em; }
 
 .tabs [id^="tab"]:checked + label {
   text-decoration: underline; }
@@ -458,6 +457,8 @@ footer {
   @media (min-width: 600px) {
     .welcome {
       height: 100vh; } }
+  .welcome h1 {
+    text-transform: none; }
   .welcome .logo {
     max-height: 75px;
     margin-bottom: 1.5em; }
