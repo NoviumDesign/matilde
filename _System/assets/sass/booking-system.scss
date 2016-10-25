@@ -769,7 +769,6 @@ body {
 .calhead-l {
     float: left;
     width: 10%;
-    height: 16px;
     padding-top: 12px;
 }
 .calhead-m {
@@ -784,7 +783,6 @@ body {
 .calhead-r {
     float: right;
     width: 10%;
-    height: 16px;
     padding-top: 12px;
 }
 table.caltable {
@@ -830,10 +828,35 @@ table.caltable td.deactive {
     color: #989898
 }
 table.caltable td.cross {
-    background-image: url(cross.gif);
+    position: relative;
     background-repeat: no-repeat;
     background-position: center center;
-    cursor: default
+    cursor: not-allowed;
+
+    &:after,
+    &:before {
+      position: absolute;
+      top: 50%;
+      margin-top: -14px;
+      left: 50%;
+      margin-left: -1px;
+      content: ' ';
+      height: 28px;
+      width: 2px;
+      background-color: $burgundy;
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+
+    &:hover {
+      cursor: not-allowed;
+    }
 }
 #time {
     width: 100%
@@ -1484,17 +1507,48 @@ div.button {
     }
 }
 .increment_month {
-    background: url(right-arrow.png) right no-repeat;
+    position: relative;
+    float: right;
     width: 8px;
     height: 13px;
-    cursor: pointer
+    cursor: pointer;
+
+    &:after {
+      right: -8px;
+      top: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: rgba(0, 0, 0, 0);
+      border-left-color: #000000;
+      border-width: 8px;
+      margin-top: -8px;
+    }
 }
 .decrement_month {
-    background: url(left-arrow.png) left no-repeat;
+    position: relative;
     width: 8px;
     height: 13px;
     margin-left: 7px;
-    cursor: pointer
+    cursor: pointer;
+
+    &:after {
+      left: -8px;
+    	top: 50%;
+    	border: solid transparent;
+    	content: " ";
+    	height: 0;
+    	width: 0;
+    	position: absolute;
+    	pointer-events: none;
+    	border-color: rgba(0, 0, 0, 0);
+    	border-right-color: #000000;
+    	border-width: 8px;
+    	margin-top: -8px;
+    }
 }
 #lang_Cancelled {
     position: absolute;
