@@ -9,7 +9,6 @@ body
 
 .height-100
   display: flex
-  flex: 1
   flex-direction: column
   flex-wrap: wrap
   align-items: center
@@ -27,10 +26,14 @@ body
 .image
   display: flex
   flex-direction: column
+  flex-wrap: wrap
+  // max-width for IE flex bug https://github.com/philipwalton/flexbugs#2-column-flex-items-set-to-align-itemscenter-overflow-their-container
+  max-width: 100%
 
   +breakpoint($medium-screen)
     flex-direction: row
     justify-content: space-around
+    align-items: center
     width: 100%
 
   +breakpoint($large-screen)
@@ -41,6 +44,7 @@ body
     width: auto
 
   img
+    flex: none
     display: block
     margin: auto
 
@@ -79,10 +83,10 @@ body
         margin-top: $base-spacing*4
 
 .info
+  // max-width for IE flex bug https://github.com/philipwalton/flexbugs#2-column-flex-items-set-to-align-itemscenter-overflow-their-container
+  max-width: 100%
   padding: $base-spacing
 
-  +breakpoint($medium-screen)
-    flex-basis: span(5)
-
   +breakpoint($large-screen)
+    flex-basis: span(5)
     padding: 0

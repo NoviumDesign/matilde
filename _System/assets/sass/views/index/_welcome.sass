@@ -12,8 +12,11 @@
 
   h1
     text-transform: none
+    // max-width for IE flex bug https://github.com/philipwalton/flexbugs#2-column-flex-items-set-to-align-itemscenter-overflow-their-container
+    max-width: 100%
 
   .logo
+    min-width: 100%
     max-height: 75px
     margin-bottom: $base-spacing
 
