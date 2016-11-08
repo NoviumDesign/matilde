@@ -12,7 +12,7 @@
     "start": "node ./bin/www",
     "lint": "jshint **.js",
     "build": "npm run build:js && npm run build:css && npm run build:postcss",
-    "build:css": "node-sass _System/assets/sass/application.scss > _System/public/stylesheets/application.css \" node-sass _System/assets/sass/booking-system.scss > _System/public/stylesheets/booking-system.css \"",
+    "build:css": "node-sass _System/assets/sass/application.scss > _System/public/stylesheets/application.css && node-sass _System/assets/sass/booking-system.scss > _System/public/stylesheets/booking-system.css",
     "build:postcss": "postcss --use autoprefixer -o _System/public/stylesheets/application.css _System/public/stylesheets/application.css",
     "build:js": "browserify _System/assets/javascript/application.js > _System/public/javascript/application.js",
     "browsersync": "browser-sync start --proxy 'http://matilde.noviumplatform.se' --serveStatic 'public' --files 'public'",
