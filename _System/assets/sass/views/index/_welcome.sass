@@ -6,17 +6,21 @@
   flex-direction: column
   justify-content: center
   height: 70vh
+  overflow: hidden
 
   +breakpoint($medium-screen)
     height: 100vh
     padding: 0
 
   video
+    display: none
     min-width: 100%
-    min-height: 100%
     width: auto
     height: auto
     object-fit: fill
+    +breakpoint($medium-screen)
+      display: flex
+      flex: 1
 
   .inner
     position: absolute

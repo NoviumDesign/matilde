@@ -21,3 +21,10 @@ function toggleNav() {
     navToggle.textContent = 'Stäng meny';
   }
 }
+$(function() {
+  $('video').on('ended', function() {
+    // $('video')[0].autoplay = false;
+    // $('video')[0].load();
+    $('video').remove();
+  });
+});
