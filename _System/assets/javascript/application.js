@@ -1,3 +1,5 @@
+require('objectFitPolyfill');
+
 var navToggle   = document.getElementById('do-toggle-nav'),
     body        = document.body,
     menuItems   = document.getElementById('main-nav').getElementsByTagName('a');
