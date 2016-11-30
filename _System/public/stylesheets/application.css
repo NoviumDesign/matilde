@@ -279,14 +279,14 @@ header {
   top: 0;
   height: 60px;
   width: 100%;
-  z-index: 9; }
+  z-index: 99; }
   header .borders {
     width: 30.8642%;
     float: left;
     margin-right: 3.7037%;
     height: 100%;
     position: relative;
-    z-index: 999; }
+    z-index: 9999; }
     header .borders:last-child {
       width: 30.8642%;
       float: right;
@@ -331,7 +331,7 @@ header {
   color: #000;
   text-transform: uppercase;
   margin-top: 21px;
-  z-index: 999; }
+  z-index: 9999; }
   @media (min-width: 600px) {
     #do-toggle-nav {
       display: none; } }
@@ -347,7 +347,7 @@ nav#main-nav {
   width: 100vw;
   background-color: beige;
   padding-top: 92px;
-  z-index: 99; }
+  z-index: 999; }
   nav#main-nav li {
     text-align: center;
     margin-bottom: 0.75em; }
@@ -415,7 +415,10 @@ body.nav-open nav#main-nav {
 #tab3:checked ~ #tab-content3,
 #tab4:checked ~ #tab-content4,
 #tab5:checked ~ #tab-content5,
-#tab6:checked ~ #tab-content6 {
+#tab6:checked ~ #tab-content6,
+#tab7:checked ~ #tab-content7,
+#tab8:checked ~ #tab-content8,
+#tab9:checked ~ #tab-content9 {
   display: block; }
 
 footer {
@@ -455,10 +458,40 @@ footer {
   background-position: center;
   flex-direction: column;
   justify-content: center;
-  height: 70vh; }
+  height: 60vh;
+  overflow: hidden;
+  padding: 0; }
   @media (min-width: 600px) {
     .welcome {
-      height: 100vh; } }
+      height: 100vh;
+      padding: 0; } }
+  .welcome video {
+    min-width: 100%;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1.8s ease-in-out; }
+    @media (min-width: 600px) {
+      .welcome video {
+        display: flex;
+        flex: 1; } }
+  .welcome .inner {
+    position: absolute;
+    padding: 0 1.5em 1.5em 1.5em;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9;
+    opacity: 0;
+    transition: opacity 1.8s ease-in-out; }
+    @media (min-width: 900px) {
+      .welcome .inner {
+        transform: translateX(-50%) translateY(-50%);
+        left: 50%;
+        opacity: 1; } }
+  .welcome.video-ended video {
+    opacity: 0; }
+  .welcome.video-ended .inner {
+    opacity: 1; }
   .welcome h1 {
     text-transform: none;
     max-width: 100%; }

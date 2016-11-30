@@ -22,6 +22,7 @@
     "autoprefixer": "^6.5.0",
     "bourbon": "^5.0.0-beta.6",
     "breakpoint-sass": "^2.7.0",
+    "objectFitPolyfill": "^2.0.1",
     "postcss-cli": "^2.6.0",
     "susy": "^2.2.12"
   },

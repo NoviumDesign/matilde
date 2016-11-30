@@ -5,19 +5,21 @@
   background-position: center
   flex-direction: column
   justify-content: center
-  height: 70vh
+  height: 60vh
   overflow: hidden
+  padding: 0
 
   +breakpoint($medium-screen)
     height: 100vh
     padding: 0
 
   video
-    display: none
     min-width: 100%
     width: auto
-    height: auto
-    object-fit: fill
+    height: 100%
+    object-fit: cover
+    transition: opacity 1.8s ease-in-out
+
     +breakpoint($medium-screen)
       display: flex
       flex: 1
@@ -25,6 +27,23 @@
   .inner
     position: absolute
     padding: 0 $base-spacing $base-spacing $base-spacing
+    top: 50%
+    transform: translateY(-50%)
+    z-index: $welcome-content-z-index
+    opacity: 0
+    transition: opacity 1.8s ease-in-out
+
+    +breakpoint($large-screen)
+      transform: translateX(-50%) translateY(-50%)
+      left: 50%
+      opacity: 1
+
+  &.video-ended
+    video
+      opacity: 0
+
+    .inner
+      opacity: 1
 
   h1
     text-transform: none

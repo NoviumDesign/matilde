@@ -18,9 +18,10 @@ $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
-$header-z-index: 9;
-$mobile-nav-z-index: 99;
-$header-content-z-index: 999;
+$welcome-content-z-index: 9;
+$header-z-index: 99;
+$mobile-nav-z-index: 999;
+$header-content-z-index: 9999;
 $base-letter-spacing: 1px;
 
 $header-height: 60px;
